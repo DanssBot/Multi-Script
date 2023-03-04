@@ -4,7 +4,7 @@
 # -*- ENCODING: UTF-8 -*-
 export PATH=$PATH:/usr/sbin:/usr/local/sbin:/usr/local/bin:/usr/bin:/sbin:/bin:/usr/games;
 fecha=`date +"%d-%m-%y"`;
-SCPdir="/etc/adm-lite"
+SCPT_DIR="/etc/SCRIPT"
 SCPinstal="$HOME/install"
 rm -f instala.*
 [[ -e /etc/folteto ]] && rm -f /etc/folteto
