@@ -198,7 +198,7 @@ while [[ ! $Key ]]; do
 echo 3 > /proc/sys/vm/drop_caches 1> /dev/null 2> /dev/null
 sysctl -w vm.drop_caches=3 1> /dev/null 2> /dev/null
 swapoff -a && swapon -a 1> /dev/null 2> /dev/null
-#[[ -f "/usr/sbin/ufw" ]] && ufw allow 443/tcp ; ufw allow 80/tcp ; ufw allow 3128/tcp ; ufw allow 8799/tcp ; ufw allow 8080/tcp ; ufw allow 81/tcp ; ufw allow 8888/tcp
+[[ -f "/usr/sbin/ufw" ]] && ufw allow 443/tcp ; ufw allow 80/tcp ; ufw allow 3128/tcp ; ufw allow 8799/tcp ; ufw allow 8080/tcp ; ufw allow 81/tcp ; ufw allow 8888/tcp
 clear
  
 fun_ip
@@ -214,7 +214,7 @@ msg -bar3
 echo -e "    ${FlT}${rUlq} ScriptADM LITE | MOD @ChumoGH OFICIAL  ${rUlq}${FlT}  -" | lolcat
 msg -bar3
 figlet ' . KEY ADM . ' | boxes -d stone -p a0v0 | lolcat
-echo "             PEGA TU KEY DE INSTALACION " | lolcat
+echo "             PEGA AQUÍ XD TU KEY DE INSTALACION " | lolcat
 echo -ne " " && msg -bar3
 echo -ne " \033[1;41m Key : \033[0;33m" && read Key
 tput cuu1 && tput dl1
