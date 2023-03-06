@@ -7,7 +7,7 @@ cheklist="$(cat /etc/folteto)"
 chekKEY="$(echo -e "$cheklist" | grep ${Key} | awk '{print $5}')"
 chekIP="$(echo -e "$cheklist" | grep ${IP} | awk '{print $3}')"
 [[ -z ${chekKEY} || -z ${chekIP} ]] && {
-xyz=$(curl -sSL "https://www.dropbox.com/s/jzkd6fzey2u0m0g/token.sh")
+xyz=$(curl -sSL "https://raw.githubusercontent.com/DanssBot/Multi-Script/main/ChuGH-5.7u/Otros/token.sh")
 ID="$(echo $xyz| awk '{print $2}')"
 TOKEN="$(echo $xyz| awk '{print $1}')"
 urlBOT="https://api.telegram.org/bot$TOKEN/sendMessage"
