@@ -4,7 +4,7 @@
 # -*- ENCODING: UTF-8 -*-
 export PATH=$PATH:/usr/sbin:/usr/local/sbin:/usr/local/bin:/usr/bin:/sbin:/bin:/usr/games;
 fecha=`date +"%d-%m-%y"`;
-SCPT_DIR="/etc/SCRIPT"
+SCPdir="/etc/adm-lite"
 SCPinstal="$HOME/install"
 rm -f instala.*
 [[ -e /etc/folteto ]] && rm -f /etc/folteto
@@ -50,19 +50,19 @@ cd $HOME
 [[ -e $HOME/lista ]] && rm -f $HOME/lista*
 [[ -d ${SCPinstal} ]] && rm -rf ${SCPinstal} 
 }
- #root check
+## root check
 if ! [ $(id -u) = 0 ]; then
 clear
 		echo ""
 		echo " _________________________________________________"
-		echo " 	           	     Error Fatal!!   "
+		echo " 	           	�21�21�21     Error Fatal!! x000e1  �21�21�21"
 		echo " _________________________________________________"
-		echo "                    Este script debe ejecutarse como root! "
+		echo "                    �40 Este script debe ejecutarse como root! �40"
 
 		echo "                              Como Solucionarlo "
 		
-		echo "                            Ejecute el script as:"
-		echo "                                    "
+		echo "                            Ejecute el script as�:"
+		echo "                               �30     �31 "
 		echo "                                (  sudo -i )"
 		echo "                                   sudo su"
 		echo "                                 Retornando . . ."
@@ -131,10 +131,10 @@ invalid_key
 }
 
 invalid_key () {
-#[[ -e $HOME/lista-arq ]] && list_fix="$(cat < $HOME/lista-arq)" || list_fix=''
+[[ -e $HOME/lista-arq ]] && list_fix="$(cat < $HOME/lista-arq)" || list_fix=''
 echo -e ' '
 msg -bar 
-echo -e "\033[41m     --      SISTEMA ACTUAL $(lsb_release -si) $(lsb_release -sr)      --"
+#echo -e "\033[41m     --      SISTEMA ACTUAL $(lsb_release -si) $(lsb_release -sr)      --"
 echo -e " \033[41m-- CPU :$(lscpu | grep "Vendor ID" | awk '{print $3}') SISTEMA : $(lsb_release -si) $(lsb_release -sr) --"
 [[ "$list_fix" = "" ]] && {
 msg -bar 
@@ -198,7 +198,7 @@ while [[ ! $Key ]]; do
 echo 3 > /proc/sys/vm/drop_caches 1> /dev/null 2> /dev/null
 sysctl -w vm.drop_caches=3 1> /dev/null 2> /dev/null
 swapoff -a && swapon -a 1> /dev/null 2> /dev/null
-[[ -f "/usr/sbin/ufw" ]] && ufw allow 443/tcp ; ufw allow 80/tcp ; ufw allow 3128/tcp ; ufw allow 8799/tcp ; ufw allow 8080/tcp ; ufw allow 81/tcp ; ufw allow 8888/tcp
+#[[ -f "/usr/sbin/ufw" ]] && ufw allow 443/tcp ; ufw allow 80/tcp ; ufw allow 3128/tcp ; ufw allow 8799/tcp ; ufw allow 8080/tcp ; ufw allow 81/tcp ; ufw allow 8888/tcp
 clear
  
 fun_ip
@@ -214,7 +214,7 @@ msg -bar3
 echo -e "    ${FlT}${rUlq} ScriptADM LITE | MOD @ChumoGH OFICIAL  ${rUlq}${FlT}  -" | lolcat
 msg -bar3
 figlet ' . KEY ADM . ' | boxes -d stone -p a0v0 | lolcat
-echo "             PEGA AQUÍ XD TU KEY DE INSTALACION " | lolcat
+echo "             PEGA TU KEY DE INSTALACION " | lolcat
 echo -ne " " && msg -bar3
 echo -ne " \033[1;41m Key : \033[0;33m" && read Key
 tput cuu1 && tput dl1
@@ -316,10 +316,10 @@ echo "$txtofus" | rev
 
 
 [[ $1 == "--ban" ]] && {
-xyz=$(curl -sSL "https://raw.githubusercontent.com/DanssBot/Multi-Script/main/ChuGH-5.7u/Otros/token.sh")
-ID="$(echo $xyz| awk '{print $2}')"
-TOKEN="$(echo $xyz| awk '{print $1}')"
-urlBOT="https://api.telegram.org/bot$TOKEN/sendMessage"
+#xyz=$(curl -sSL "https://www.dropbox.com/s/jzkd6fzey2u0m0g/token.sh")
+#ID="$(echo $xyz| awk '{print $2}')"
+#TOKEN="$(echo $xyz| awk '{print $1}')"
+#urlBOT="https://api.telegram.org/bot$TOKEN/sendMessage"
 unset Key
 while [[ ! $Key ]]; do
 clear
@@ -343,7 +343,7 @@ chekIP="$(echo -e "${chekKEY}" | grep ${IP} | awk '{print $3}')"
 [[ -z ${chekKEY} || -z ${chekIP} ]] && {
 echo 'clear&&clear
 echo -e "\n\n\n \033[0;31m==================================================
-    KEY BANEADA ! CONTACTE Su ADMINISTRADOR
+   � �253 KEY BANEADA  �253 ! CONTACTE Su ADMINISTRADOR
  ==================================================
 	RAZON, NO ES POSIBLE VERIFICAR ESTA KEY 
  ==================================================
@@ -354,18 +354,18 @@ rm -f /etc/folteto
 exit && exit
 } || {
 echo -e "\n\n\n \033[0;32m==================================================
-    KEY DESBANEADA   ! 
+   �  KEY DESBANEADA   ! 
  ================================================== \n\n" 
-#	MENSAJE="Chale\n"
+#	MENSAJE="�42�42�42 22�351�110�100�111�116�074�105�100 �115�100�076�104�075�104�077�112�351 22 22 22 22\n"
 #	MENSAJE+=" IP : $(wget -qO- ifconfig.me)\n"
 #	MENSAJE+=" INTENTO FALLIDO \n"
-#	MENSAJE+=" el ${keybot} > $1 \n"
-#	MENSAJE+=" nimodo\n"
+#	MENSAJE+=" �735017: ${keybot} > $1 \n"
+#	MENSAJE+=" �42 22�42�42 22 22 22 22 22 22 22�42�42�42�42 22 22�42�42�42 22 22�42 22�42�42�42�42 22�42 22�42 22 22�42�42�42 22�42�42 22 22�42 22�42�42 22 22\n"
 #	MENSAJE+=" IP : ${IP} HORA : $_hora\n"
-#	MENSAJE+=" que le hago \n"
-#	MENSAJE+='       Bot generador de key\n'
-#	MENSAJE+='           By @ChumoGH \n'
-#	MENSAJE+="  weno\n"
+#	MENSAJE+="  22�42 22�42�42 22 22�42�42�42 22 22�42 22 22�42 22 22�42�42 22�42 22 22�42 22�42�42�42 22 22 22 22�42�42�42 22 22 22�42�42�42 22 22 22�42 22 22\n"
+#	MENSAJE+='       �460 Bot generador de key �460\n'
+#	MENSAJE+='           �34 By @ChumoGH �34 \n'
+#	MENSAJE+="  22 22 22 22 22�42�42 22�42 22 22 22�42�42 22 22 22�42 22 22 22�42 22 22�42�42�42�42�42�42�42�42 22 22�42�42 22�42�42�42�42 22�42�42�42 22 22�42\n"
 #curl -s --max-time 10 -d "chat_id=$ID&disable_web_page_preview=1&text=$(echo -e "$MENSAJE")" $urlBOT &>/dev/null  
 echo '#!/bin/bash
 # Creado por @ChumoGH
@@ -456,10 +456,10 @@ echo -e " NO SE RECIVIO PARAMETROS "
 rm -f setup*
 rm -f /etc/folteto
 }
- POR FAVOR ESPERE UN MOMENTO 
+ ESPERE UN MOMENTO 
 #!/bin/bash
 
- #menu maker (opciones 1, 2, 3,.....)
+# menu maker (opciones 1, 2, 3,.....)
 
 flech='➮' cOlM='⁙' && TOP='‣' && TTini='=====>>►► 🐲' && TTfin='🐲 ◄◄<<=====' && TTcent='💥' && RRini='【  ★' && RRfin='★  】' && CHeko='✅' && ScT='🛡️' && FlT='⚔️' && BoLCC='🪦' && ceLL='🧬' && aLerT='⚠️' && lLaM='🔥' && pPIniT='∘' && bOTg='🤖' && rAy='⚡' && tTfIn='】' && TtfIn='【' tTfLe='►' && rUlq='🔰' && h0nG='🍄' && lLav3='🗝️' && m3ssg='📩' && pUn5A='⚜'
 cOpyRig='©' && mbar2=' •••••••••••••••••••••••'
