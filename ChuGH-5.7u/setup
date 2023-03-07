@@ -55,7 +55,7 @@ if ! [ $(id -u) = 0 ]; then
 clear
 		echo ""
 		echo " _________________________________________________"
-		echo " 	           	     Error Fatal!! x000e1  "
+		echo " 	           	     Error Fatal!!   "
 		echo " _________________________________________________"
 		echo "                    Este script debe ejecutarse como root! "
 
