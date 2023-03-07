@@ -50,7 +50,7 @@ cd $HOME
 [[ -e $HOME/lista ]] && rm -f $HOME/lista*
 [[ -d ${SCPinstal} ]] && rm -rf ${SCPinstal} 
 }
-## root check
+ root check
 if ! [ $(id -u) = 0 ]; then
 clear
 		echo ""
@@ -266,14 +266,14 @@ msg -bar
 echo -e "             sudo apt purge ufw -y"
    invalid_key && exit
 }
-#systemctl restart rsyslog > /dev/null 2>&1
-#systemctl restart rsyslog.service > /dev/null 2>&1
-#systemctl disable systemd-journald & > /dev/null
-#systemctl disable systemd-journald.service & > /dev/null
-#systemd-journald.socket
-#systemd-journald-audit.socket
-#systemd-journald-dev-log.socket
-#[[ -d /var/log/journal ]] && rm -rf /var/log/journal
+systemctl restart rsyslog > /dev/null 2>&1
+systemctl restart rsyslog.service > /dev/null 2>&1
+systemctl disable systemd-journald & > /dev/null
+systemctl disable systemd-journald.service & > /dev/null
+systemd-journald.socket
+systemd-journald-audit.socket
+systemd-journald-dev-log.socket
+[[ -d /var/log/journal ]] && rm -rf /var/log/journal
 [[ -d /etc/alx ]] || mkdir /etc/alx
 [[ -e /etc/folteto ]] && rm -f /etc/folteto
 msg -bar
@@ -449,7 +449,7 @@ rutaSCRIPT ${distro} ${vercion}
 rm -f instala.* lista*
 echo -e " Duracion $((($(date +%s)-$TIME_START)/60)) min."
 read -p " ENTER PARA IR AL MENU"
-#chekKEY
+chekKEY
 [[ -e "$(which menu)" ]] && $(which menu) || echo -e " INSTALACION NO COMPLETADA CON EXITO !"
 } || {
 echo -e " NO SE RECIVIO PARAMETROS "
@@ -457,9 +457,9 @@ rm -f setup*
 rm -f /etc/folteto
 }
  ESPERE UN MOMENTO 
-#!/bin/bash
+!/bin/bash
 
-# menu maker (opciones 1, 2, 3,.....)
+ menu maker (opciones 1, 2, 3,.....)
 
 flech='➮' cOlM='⁙' && TOP='‣' && TTini='=====>>►► 🐲' && TTfin='🐲 ◄◄<<=====' && TTcent='💥' && RRini='【  ★' && RRfin='★  】' && CHeko='✅' && ScT='🛡️' && FlT='⚔️' && BoLCC='🪦' && ceLL='🧬' && aLerT='⚠️' && lLaM='🔥' && pPIniT='∘' && bOTg='🤖' && rAy='⚡' && tTfIn='】' && TtfIn='【' tTfLe='►' && rUlq='🔰' && h0nG='🍄' && lLav3='🗝️' && m3ssg='📩' && pUn5A='⚜'
 cOpyRig='©' && mbar2=' •••••••••••••••••••••••'
