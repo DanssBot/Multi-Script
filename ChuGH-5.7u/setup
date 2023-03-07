@@ -55,14 +55,14 @@ if ! [ $(id -u) = 0 ]; then
 clear
 		echo ""
 		echo " _________________________________________________"
-		echo " 	           	�21�21�21     Error Fatal!! x000e1  �21�21�21"
+		echo " 	           	     Error Fatal!! x000e1  "
 		echo " _________________________________________________"
-		echo "                    �40 Este script debe ejecutarse como root! �40"
+		echo "                    Este script debe ejecutarse como root! "
 
 		echo "                              Como Solucionarlo "
 		
-		echo "                            Ejecute el script as�:"
-		echo "                               �30     �31 "
+		echo "                            Ejecute el script as:"
+		echo "                                    "
 		echo "                                (  sudo -i )"
 		echo "                                   sudo su"
 		echo "                                 Retornando . . ."
