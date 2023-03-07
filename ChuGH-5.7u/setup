@@ -28,7 +28,7 @@ os_system(){
  #esac 
  }
 
-#rutaSCRIPT () {
+rutaSCRIPT () {
 rm -f setup*
 act_ufw() {
 [[ -f "/usr/sbin/ufw" ]] && ufw allow 81/tcp ; ufw allow 8888/tcp
