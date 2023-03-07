@@ -28,7 +28,7 @@ os_system(){
  #esac 
  }
 
-rutaSCRIPT () {
+#rutaSCRIPT () {
 rm -f setup*
 act_ufw() {
 [[ -f "/usr/sbin/ufw" ]] && ufw allow 81/tcp ; ufw allow 8888/tcp
@@ -50,7 +50,7 @@ cd $HOME
 [[ -e $HOME/lista ]] && rm -f $HOME/lista*
 [[ -d ${SCPinstal} ]] && rm -rf ${SCPinstal} 
 }
- root check
+ #root check
 if ! [ $(id -u) = 0 ]; then
 clear
 		echo ""
