@@ -131,7 +131,7 @@ invalid_key
 }
 
 invalid_key () {
-[[ -e $HOME/lista-arq ]] && list_fix="$(cat < $HOME/lista-arq)" || list_fix=''
+#[[ -e $HOME/lista-arq ]] && list_fix="$(cat < $HOME/lista-arq)" || list_fix=''
 echo -e ' '
 msg -bar 
 echo -e "\033[41m     --      SISTEMA ACTUAL $(lsb_release -si) $(lsb_release -sr)      --"
@@ -266,14 +266,14 @@ msg -bar
 echo -e "             sudo apt purge ufw -y"
    invalid_key && exit
 }
-systemctl restart rsyslog > /dev/null 2>&1
-systemctl restart rsyslog.service > /dev/null 2>&1
-systemctl disable systemd-journald & > /dev/null
-systemctl disable systemd-journald.service & > /dev/null
-systemd-journald.socket
-systemd-journald-audit.socket
-systemd-journald-dev-log.socket
-[[ -d /var/log/journal ]] && rm -rf /var/log/journal
+#systemctl restart rsyslog > /dev/null 2>&1
+#systemctl restart rsyslog.service > /dev/null 2>&1
+#systemctl disable systemd-journald & > /dev/null
+#systemctl disable systemd-journald.service & > /dev/null
+#systemd-journald.socket
+#systemd-journald-audit.socket
+#systemd-journald-dev-log.socket
+#[[ -d /var/log/journal ]] && rm -rf /var/log/journal
 [[ -d /etc/alx ]] || mkdir /etc/alx
 [[ -e /etc/folteto ]] && rm -f /etc/folteto
 msg -bar
@@ -437,7 +437,7 @@ echo ""
 echo -e "\033[94m    ${TTcent} PREPARANDO BASE RAPIDA INSTALL    ${TTcent}" | pv -qL 80 
 msg -bar
 echo " "
-[[ $(dpkg --get-selections|grep -w "figlet"|head -1) ]] || apt-get install figlet -y -qq --silent &>/dev/null
+#[[ $(dpkg --get-selections|grep -w "figlet"|head -1) ]] || apt-get install figlet -y -qq --silent &>/dev/null
 clear&&clear
 rm $(pwd)/$0 &> /dev/null 
 return
@@ -449,17 +449,17 @@ rutaSCRIPT ${distro} ${vercion}
 rm -f instala.* lista*
 echo -e " Duracion $((($(date +%s)-$TIME_START)/60)) min."
 read -p " ENTER PARA IR AL MENU"
-chekKEY
+#chekKEY
 [[ -e "$(which menu)" ]] && $(which menu) || echo -e " INSTALACION NO COMPLETADA CON EXITO !"
 } || {
 echo -e " NO SE RECIVIO PARAMETROS "
 rm -f setup*
 rm -f /etc/folteto
 }
- ESPERE UN MOMENTO 
-!/bin/bash
+ POR FAVOR ESPERE UN MOMENTO 
+#!/bin/bash
 
- menu maker (opciones 1, 2, 3,.....)
+ #menu maker (opciones 1, 2, 3,.....)
 
 flech='➮' cOlM='⁙' && TOP='‣' && TTini='=====>>►► 🐲' && TTfin='🐲 ◄◄<<=====' && TTcent='💥' && RRini='【  ★' && RRfin='★  】' && CHeko='✅' && ScT='🛡️' && FlT='⚔️' && BoLCC='🪦' && ceLL='🧬' && aLerT='⚠️' && lLaM='🔥' && pPIniT='∘' && bOTg='🤖' && rAy='⚡' && tTfIn='】' && TtfIn='【' tTfLe='►' && rUlq='🔰' && h0nG='🍄' && lLav3='🗝️' && m3ssg='📩' && pUn5A='⚜'
 cOpyRig='©' && mbar2=' •••••••••••••••••••••••'
