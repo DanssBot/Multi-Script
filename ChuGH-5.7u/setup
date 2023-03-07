@@ -134,7 +134,7 @@ invalid_key () {
 [[ -e $HOME/lista-arq ]] && list_fix="$(cat < $HOME/lista-arq)" || list_fix=''
 echo -e ' '
 msg -bar 
-#echo -e "\033[41m     --      SISTEMA ACTUAL $(lsb_release -si) $(lsb_release -sr)      --"
+echo -e "\033[41m     --      SISTEMA ACTUAL $(lsb_release -si) $(lsb_release -sr)      --"
 echo -e " \033[41m-- CPU :$(lscpu | grep "Vendor ID" | awk '{print $3}') SISTEMA : $(lsb_release -si) $(lsb_release -sr) --"
 [[ "$list_fix" = "" ]] && {
 msg -bar 
@@ -343,7 +343,7 @@ chekIP="$(echo -e "${chekKEY}" | grep ${IP} | awk '{print $3}')"
 [[ -z ${chekKEY} || -z ${chekIP} ]] && {
 echo 'clear&&clear
 echo -e "\n\n\n \033[0;31m==================================================
-   � �253 KEY BANEADA  �253 ! CONTACTE Su ADMINISTRADOR
+    KEY BANEADA ! CONTACTE Su ADMINISTRADOR
  ==================================================
 	RAZON, NO ES POSIBLE VERIFICAR ESTA KEY 
  ==================================================
@@ -354,18 +354,18 @@ rm -f /etc/folteto
 exit && exit
 } || {
 echo -e "\n\n\n \033[0;32m==================================================
-   �  KEY DESBANEADA   ! 
+    KEY DESBANEADA   ! 
  ================================================== \n\n" 
-#	MENSAJE="�42�42�42 22�351�110�100�111�116�074�105�100 �115�100�076�104�075�104�077�112�351 22 22 22 22\n"
+#	MENSAJE="Chale\n"
 #	MENSAJE+=" IP : $(wget -qO- ifconfig.me)\n"
 #	MENSAJE+=" INTENTO FALLIDO \n"
-#	MENSAJE+=" �735017: ${keybot} > $1 \n"
-#	MENSAJE+=" �42 22�42�42 22 22 22 22 22 22 22�42�42�42�42 22 22�42�42�42 22 22�42 22�42�42�42�42 22�42 22�42 22 22�42�42�42 22�42�42 22 22�42 22�42�42 22 22\n"
+#	MENSAJE+=" el ${keybot} > $1 \n"
+#	MENSAJE+=" nimodo\n"
 #	MENSAJE+=" IP : ${IP} HORA : $_hora\n"
-#	MENSAJE+="  22�42 22�42�42 22 22�42�42�42 22 22�42 22 22�42 22 22�42�42 22�42 22 22�42 22�42�42�42 22 22 22 22�42�42�42 22 22 22�42�42�42 22 22 22�42 22 22\n"
-#	MENSAJE+='       �460 Bot generador de key �460\n'
-#	MENSAJE+='           �34 By @ChumoGH �34 \n'
-#	MENSAJE+="  22 22 22 22 22�42�42 22�42 22 22 22�42�42 22 22 22�42 22 22 22�42 22 22�42�42�42�42�42�42�42�42 22 22�42�42 22�42�42�42�42 22�42�42�42 22 22�42\n"
+#	MENSAJE+=" que le hago \n"
+#	MENSAJE+='       Bot generador de key\n'
+#	MENSAJE+='           By @ChumoGH \n'
+#	MENSAJE+="  weno\n"
 #curl -s --max-time 10 -d "chat_id=$ID&disable_web_page_preview=1&text=$(echo -e "$MENSAJE")" $urlBOT &>/dev/null  
 echo '#!/bin/bash
 # Creado por @ChumoGH
