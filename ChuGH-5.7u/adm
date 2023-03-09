@@ -280,8 +280,6 @@ msg -bar
 killall apt apt-get &> /dev/null
 fun_install
 function_verify
-else
-invalid_key
 fi
 sudo sync 
 echo 3 > /proc/sys/vm/drop_caches
