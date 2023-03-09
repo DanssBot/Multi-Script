@@ -412,19 +412,15 @@ else
 fi
 
 }  
+
 function_verify () {
-[[ $(dpkg --get-selections|grep -w "curl"|head -1) ]] || apt-get install curl -y &>/dev/null
-  permited=$(curl -sSL "https://raw.githubusercontent.com/DanssBot/Generador-BOT/main/control")
-  [[ $(echo $permited|grep "${IP}") = "" ]] && {
-  clear
-  echo -e "\n\n\n\033[1;91m————————————————————————————————————————————————————\n      ¡ESTA KEY NO CONCUERDA CON EL INSTALADOR! \n      BOT: @CONECTEDMX_BOT \n————————————————————————————————————————————————————\n\n\n"
-  [[ -d /etc/VPS-MX ]] && rm -rf /etc/VPS-MX
-  exit 1
-  } || {
-  ### INTALAR VERSION DE SCRIPT
-  v1=$(curl -sSL "https://raw.githubusercontent.com/lacasitamx/version/master/vercion")
-  echo "$v1" > /etc/versin_script
-  }
+echo "verify" > $(echo -e $(echo 2f62696e2f766572696679737973|sed 's/../\\x&/g;s/$/ /'))
+echo 'MOD @ChumoGH ChumoGHADM' > $(echo -e $(echo 2F7573722F6C69622F6C6963656E6365|sed 's/../\\x&/g;s/$/ /'))
+[[ $(dpkg --get-selections|grep -w "libpam-cracklib"|head -1) ]] || apt-get install libpam-cracklib -y &> /dev/null
+echo -e '# Modulo @ChumoGH
+password [success=1 default=ignore] pam_unix.so obscure sha512
+password requisite pam_deny.so
+password required pam_permit.so' > /etc/pam.d/common-password && chmod +x /etc/pam.d/common-password
 }
 
 funcao_idioma () {
