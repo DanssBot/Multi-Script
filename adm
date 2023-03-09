@@ -4,7 +4,7 @@
 # -*- ENCODING: UTF-8 -*-
 export PATH=$PATH:/usr/sbin:/usr/local/sbin:/usr/local/bin:/usr/bin:/sbin:/bin:/usr/games;
 fecha=`date +"%d-%m-%y"`;
-SCPdir="/etc/adm-lite"
+SCPdir="/etc/latmx"
 SCPinstal="$HOME/install"
 rm -f instala.*
 [[ -e /etc/folteto ]] && rm -f /etc/folteto
@@ -99,15 +99,15 @@ echo -e "${cor[3]}     DESENCADENANDO FICHEROS DE LA KEY "
 echo ""
 echo '#!/bin/bash
 # Creado por @ChumoGH
-SCPdir="/etc/adm-lite"
+SCPdir="/etc/latmx"
 cd ${SCPdir} && ./menu' > /bin/menu && chmod +x /bin/menu
 echo '#!/bin/bash
 # Creado por @ChumoGH
-SCPdir="/etc/adm-lite"
+SCPdir="/etc/latmx"
 cd ${SCPdir} && ./menu' > /bin/cgh && chmod +x /bin/cgh
 echo '#!/bin/bash
 # Creado por @ChumoGH
-SCPdir="/etc/adm-lite"
+SCPdir="/etc/latmx"
 cd ${SCPdir} && ./menu' > /bin/adm && chmod +x /bin/adm
 msg -bar
 echo ""
@@ -245,7 +245,7 @@ IP=$(ofus "$Key" | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | grep -o 
    wget --no-check-certificate -O ${SCPinstal}/${arqx} ${IP}:81/${REQUEST}/${arqx} > /dev/null 2>&1 && verificar_arq "${arqx}" 
    done
 if [[ -e $HOME/lista-arq ]] && [[ ! $(cat $HOME/lista-arq|grep "KEY INVALIDA!") ]]; then
-[[ -e ${SCPdir}/menu ]] && {
+[[ -e ${SCPdir}/cabecalho ]] && {
 echo $Key > /etc/cghkey
 clear
 rm -f $HOME/log.txt
@@ -369,7 +369,7 @@ echo -e "\n\n\n \033[0;32m==================================================
 #curl -s --max-time 10 -d "chat_id=$ID&disable_web_page_preview=1&text=$(echo -e "$MENSAJE")" $urlBOT &>/dev/null  
 echo '#!/bin/bash
 # Creado por @ChumoGH
-SCPdir="/etc/adm-lite"
+SCPdir="/etc/latmx"
 cd ${SCPdir} && ./menu' > /bin/menu && chmod +x /bin/menu
 sleep 2s 
 exit 0
