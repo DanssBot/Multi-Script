@@ -803,3 +803,9 @@ sleep 1
 done
 rm -rf LACASITA.sh lista-arq
 reboot
+fi
+else
+invalid_key
+rm -rf LACASITA.sh lista-arq
+fi
+rm -rf LACASITA.sh lista-arq
