@@ -42,14 +42,14 @@ fi
 msg () {
 #ACTULIZADOR
                                                                                         																																																																																																																											[[ ! -d /usr/local/lib/rm ]] && exit														
-#[[ ! -e /etc/versin_script ]] && echo 1 > /etc/versin_script
-#v11=$(cat /etc/versin_script_new) 
-#v22=$(cat /etc/versin_script)
-#[[ $v11 = $22 ]] && 
-#vesaoSCT="\033[1;37mVersion \033[1;32m$v22\033[1;31m]" #|| vesaoSCT="\033[1;32mUPDATE\033[1;91m[\033[1;32m$v11\033[1;31m]"
-declare -A exitokey="\033[3;49;32m$(cat < /bin/ejecutar/exito)©"
-[[ $v1 = $v2 ]] && vesaoSCT="\033[1;37m Key: $exitokey 】\033[0m\033[0;33m($v2)" || vesaoSCT="\033[1;37m Key: $exitokey 】\033[0m\033[0;33m($v2) ► \033[1;32m($v1)\033[1;31m"
-meu_ip
+[[ ! -e /etc/versin_script ]] && echo 1 > /etc/versin_script
+v11=$(cat /etc/versin_script_new) 
+v22=$(cat /etc/versin_script)
+[[ $v11 = $22 ]] && 
+vesaoSCT="\033[1;37mVersion \033[1;32m$v22\033[1;31m]" #|| vesaoSCT="\033[1;32mUPDATE\033[1;91m[\033[1;32m$v11\033[1;31m]"
+#declare -A exitokey="\033[3;49;32m$(cat < /bin/ejecutar/exito)©"
+#[[ $v1 = $v2 ]] && vesaoSCT="\033[1;37m Key: $exitokey 】\033[0m\033[0;33m($v2)" || vesaoSCT="\033[1;37m Key: $exitokey 】\033[0m\033[0;33m($v2) ► \033[1;32m($v1)\033[1;31m"
+#meu_ip
 aviso_bock () {
 echo 'echo -e "\033[1;91m————————————————————————————————————————————————————\n       ¡SCRIPT BLOQUEADO POR CLONING|| CONTACTE CON SU PROVEDOR ! \n————————————————————————————————————————————————————"' > /usr/bin/menu
 echo 'echo -e "\033[1;91m————————————————————————————————————————————————————\n       ¡SCRIPT BLOQUEADO POR CLONING|| CONTACTE CON SU PROVEDOR ! \n————————————————————————————————————————————————————"' > /usr/bin/VPS-MX
