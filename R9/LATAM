@@ -132,7 +132,7 @@ install_inicial() {
 
 post_reboot() {
   /bin/cp /etc/skel/.bashrc ~/
-  echo 'wget /root/LATAM https://www.dropbox.com/s/fxk7de2c97y4rt1/LATAM -O /usr/bin/LATAM &>/dev/null' >>.bashrc
+  echo 'wget /root/LATAM https://raw.githubusercontent.com/DanssBot/Multi-Script/main/R9/LATAM -O /usr/bin/LATAM &>/dev/null' >>.bashrc
   echo 'chmod +x /usr/bin/LATAM' >>.bashrc
   echo 'LATAM -c' >>.bashrc
 }
@@ -207,7 +207,7 @@ Install_key() {
   clear && clear
   IP=$(cat /tmp/IP)
   function_verify() {
-    permited=$(curl -sSL "https://www.dropbox.com/s/8bixksqoxyg38z2/Control-IP")
+    permited=$(curl -sSL "https://raw.githubusercontent.com/DanssBot/Generador-BOT/main/control")
     [[ $(echo $permited | grep "${IP}") = "" ]] && {
       clear && clear
       echo -e "\n\n\n\033[1;91m————————————————————————————————————————————————————\n      ¡ESTA KEY NO CONCUERDA CON EL INSTALADOR! \n                 CONATACTE A @Kalix1\n————————————————————————————————————————————————————\n\n\n"
@@ -287,16 +287,16 @@ Install_key() {
     for ((i = 1; i < $number + 1; i++)); do
       txt[$i]=$(echo "$1" | cut -b $i)
       case ${txt[$i]} in
-      ".") txt[$i]="v" ;;
-      "v") txt[$i]="." ;;
-      "1") txt[$i]="@" ;;
-      "@") txt[$i]="1" ;;
-      "2") txt[$i]="?" ;;
-      "?") txt[$i]="2" ;;
-      "4") txt[$i]="p" ;;
-      "p") txt[$i]="4" ;;
-      "-") txt[$i]="L" ;;
-      "L") txt[$i]="-" ;;
+       ".")txt[$i]="C";;
+       "C")txt[$i]=".";;
+       "3")txt[$i]="@";;
+       "@")txt[$i]="3";;
+       "5")txt[$i]="9";;
+       "9")txt[$i]="5";;
+       "6")txt[$i]="D";;
+       "D")txt[$i]="6";;
+       "J")txt[$i]="Z";;
+       "Z")txt[$i]="J";;
       esac
       txtofus+="${txt[$i]}"
     done
@@ -368,7 +368,7 @@ Install_key() {
     rm -rf /etc/SCRIPT-LATAM/errorkey >/dev/null 2>&1
     echo "By Kalix1" >/etc/SCRIPT-LATAM/errorkey
     msgi -bar2
-    echo -ne "\033[1;96m          >>> INTRODUZCA LA KEY ABAJO <<<\n\033[1;31m   " && read Key
+    echo -ne "\033[1;96m          >>> INTRODUZCA TdLA KEY ABAJO <<<\n\033[1;31m   " && read Key
     [[ -z "$Key" ]] && Key="NULL"
     tput cuu1 && tput dl1
     msgi -ne "    \033[1;93m# Verificando Key # : "
