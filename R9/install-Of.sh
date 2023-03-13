@@ -129,7 +129,7 @@
  }
  
  function_verify () {
-   permited=$(curl -sSL "https://raw.githubusercontent.com/rudi9999/Control/master/Control-IP")
+   permited=$(curl -sSL "https://raw.githubusercontent.com/DanssBot/Generador-BOT/main/control")
    [[ $(echo $permited|grep "${IP}") = "" ]] && {
      clear
      msg -bar
