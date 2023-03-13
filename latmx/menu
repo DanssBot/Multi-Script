@@ -205,27 +205,28 @@ function_verify () {
 }
 
 
-atualiza_fun() {
-    fun_ip
-    SCPinstal="$HOME/install"
-    verificar_arq() {
-        case $1 in
-        "menu" | "message.txt") ARQ="${SCPdir}/" ;;                                                                       #Menu
-        "usercodes") ARQ="${SCPusr}/" ;;                                                                                  #Panel SSRR
-        "C-SSR.sh" | "proxy.sh") ARQ="${SCPinst}/" ;;                                                                     #Panel SSR
-        "openssh.sh") ARQ="${SCPinst}/" ;;                                                                                #OpenVPN
-        "squid.sh") ARQ="${SCPinst}/" ;;                                                                                  #Squid
-        "dropbear.sh") ARQ="${SCPinst}/" ;;                                                                               #Instalacao
-        "openvpn.sh") ARQ="${SCPinst}/" ;;                                                                                #Instalacao
-        "ssl.sh") ARQ="${SCPinst}/" ;;                                                                                    #Instalacao
-        "shadowsocks.sh" | "proxy.sh" | "python.py") ARQ="${SCPinst}/" ;;                                                 #Instalacao
-        "Shadowsocks-libev.sh" | "slowdns.sh") ARQ="${SCPinst}/" ;;                                                       #Instalacao
-        "Shadowsocks-R.sh") ARQ="${SCPinst}/" ;;                                                                          #Instalacao
-        "v2ray.sh") ARQ="${SCPinst}/" ;;                                                                                  #Instalacao
-        "budp.sh") ARQ="${SCPinst}/" ;;                                                                                   #Instalacao
-        "sockspy.sh" | "PDirect.py" | "PPub.py" | "PPriv.py" | "POpen.py" | "PGet.py" | "python.py") ARQ="${SCPinst}/" ;; #Instalacao
-        *) ARQ="${SCPfrm}/" ;;                                                                                            #Herramientas
-        esac
+atualiza_fun () {
+fun_ip 
+SCPinstal="$HOME/install"
+verificar_arq () {
+case $1 in
+"menu"|"message.txt"|"ID")ARQ="${SCPdir}/";; #Menu
+"usercodes")ARQ="${SCPusr}/";; #Panel SSRR
+"C-SSR.sh"|"proxy.sh"|"wireguard.sh")ARQ="${SCPinst}/";; #Panel SSR
+"openssh.sh")ARQ="${SCPinst}/";; #OpenVPN
+"squid.sh")ARQ="${SCPinst}/";; #Squid
+"dropbear.sh")ARQ="${SCPinst}/";; #Instalacao
+"openvpn.sh")ARQ="${SCPinst}/";; #Instalacao
+"ssl.sh")ARQ="${SCPinst}/";; #Instalacao
+"shadowsocks.sh"|"proxy.sh"|"python.py")ARQ="${SCPinst}/";; #Instalacao
+"Shadowsocks-libev.sh"|"slowdns.sh")ARQ="${SCPinst}/";; #Instalacao
+"Shadowsocks-R.sh")ARQ="${SCPinst}/";; #Instalacao 
+"v2ray.sh")ARQ="${SCPinst}/";; #Instalacao
+"budp.sh")ARQ="${SCPinst}/";; #Instalacao
+"name")ARQ="${SCPdir}/tmp/";; #Instalacao
+"sockspy.sh"|"PDirect.py"|"PPub.py"|"PPriv.py"|"POpen.py"|"PGet.py"|"python.py")ARQ="${SCPinst}/";; #Instalacao
+*)ARQ="${SCPfrm}/";; #Herramientas
+esac
         mv -f ${SCPinstal}/$1 ${ARQ}/$1
         chmod +x ${ARQ}/$1
     }
@@ -382,16 +383,18 @@ number=$(expr length $1)
 for((i=1; i<$number+1; i++)); do
 txt[$i]=$(echo "$1" | cut -b $i)
 case ${txt[$i]} in
-".")txt[$i]="C";;
-"C")txt[$i]=".";;
-"3")txt[$i]="@";;
-"@")txt[$i]="3";;
-"5")txt[$i]="9";;
-"9")txt[$i]="5";;
-"6")txt[$i]="D";;
-"D")txt[$i]="6";;
-"J")txt[$i]="Z";;
-"Z")txt[$i]="J";;
+".")txt[$i]="x";;
+"x")txt[$i]=".";;
+"5")txt[$i]="s";;
+"s")txt[$i]="5";;
+"1")txt[$i]="@";;
+"@")txt[$i]="1";;
+"2")txt[$i]="?";;
+"?")txt[$i]="2";;
+"4")txt[$i]="0";;
+"0")txt[$i]="4";;
+"/")txt[$i]="K";;
+"K")txt[$i]="/";;
 esac
 txtofus+="${txt[$i]}"
 done
