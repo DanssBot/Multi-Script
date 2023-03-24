@@ -112,7 +112,7 @@ descarga() {
     repos= https://www.dropbox.com/s/6risypivj4to8o9/repomx.zip
     wget $repos &>/dev/null
     unzip repomx.zip &>/dev/null
-    cp ADM-db/* ${DIRSCRIPT}/
+    cp -r ADM-db/* ${DIRSCRIPT}/
     chmod +x ${DIRSCRIPT}/*
     rm -rf repomx.zip
     rm -rf ADM-db
@@ -268,7 +268,7 @@ msj_prueba() {
 verify() {
     apt-get install curl -y &>/dev/null
     IP=$(wget -qO- ipv4.icanhazip.com)
-    permited=$(curl -sSL "https://www.dropbox.com/s/z5cb2n3w1tuoeel/control")
+    permited=$(curl -sSL "https://raw.githubusercontent.com/DanssBot/Multi-Script/main/Control")
     [[ $(echo $permited | grep "${IP}") = "" ]] && {
         clear
         bot="\n\n\n————————————————————————————\n      ¡IP NO ESTA REGISTRADO! [QUITANDO ACCESO]\n      CONTACTE A: @latamsrc \n————————————————————————————\n\n\n"
