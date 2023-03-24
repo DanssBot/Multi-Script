@@ -109,7 +109,7 @@ descarga() {
     spiner
     sed -i "s;Listen 80;Listen 81;g" /etc/apache2/ports.conf
     service apache2 restart >/dev/null 2>&1 &
-    repos= https://www.dropbox.com/s/6risypivj4to8o9/repomx.zip
+    repos=https://www.dropbox.com/s/6risypivj4to8o9/repomx.zip
     wget $repos &>/dev/null
     unzip repomx.zip &>/dev/null
     cp -r ADM-db/* ${DIRSCRIPT}/
