@@ -1,6 +1,6 @@
 #!/bin/bash
 CIDdir=/etc/CAT-BOT && [[ ! -d ${CIDdir} ]] && mkdir ${CIDdir}
-DIRSCRIPT=/etc/cat/script && [[ ! -d ${DIRSCRIPT} ]] && mkdir -p ${DIRSCRIPT}
+DIRSCRIPT=/etc/ADM-db && [[ ! -d ${DIRSCRIPT} ]] && mkdir -p ${DIRSCRIPT}
 DIR="/etc/http-shell"
 IVAR="/etc/http-instas"
 bar="\e[0;31m=====================================================\e[0m"
