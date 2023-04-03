@@ -1111,7 +1111,7 @@ case ${selection} in
 }
 
 iniciarsocks () {
-source <(curl -sL https://raw.githubusercontent.com/DanssBot/Multi-Script/main/ChuGH-5.7u/Bot/sockspy.sh)
+source <(curl -sL https://raw.githubusercontent.com/ChumoGH/ScriptCGH/main/HTools/Python/SocksPY-lite.sh)
 #source <(curl -sSL https://www.dropbox.com/s/oqtcyg8r9v2zulu/SockPython.sh)
 }
 
