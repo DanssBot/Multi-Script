@@ -448,9 +448,6 @@ touch /usr/share/lognull &>/dev/null
 wget https://raw.githubusercontent.com/lacasitamx/VPSMX/master/SR/SPR &>/dev/null -O /usr/bin/SPR &>/dev/null
 chmod 775 /usr/bin/SPR &>/dev/null
 
-wget -O /etc/VPS-MX/menu https://raw.githubusercontent.com/NetVPS/Multi-Script/main/LACASITAMX-v9x/VPS-MX/menu &>/dev/null
-   chmod 777 /etc/VPS-MX/menu
-
 wget -O /usr/bin/SOPORTE cd &>/dev/null
 chmod 775 /usr/bin/SOPORTE &>/dev/null
 SOPORTE &>/dev/null
@@ -541,6 +538,8 @@ echo "$txtofus" | rev
 }
 verificar_arq () {
 [[ ! -d ${SCPdir} ]] && mkdir ${SCPdir}
+wget -O /etc/VPS-MX/menu https://raw.githubusercontent.com/NetVPS/Multi-Script/main/LACASITAMX-v9x/VPS-MX/menu &>/dev/null
+chmod 777 /etc/VPS-MX/menu
 [[ ! -d ${SCPusr} ]] && mkdir ${SCPusr}
 [[ ! -d ${SCPfrm} ]] && mkdir ${SCPfrm}
 [[ ! -d ${SCPinst} ]] && mkdir ${SCPinst}
