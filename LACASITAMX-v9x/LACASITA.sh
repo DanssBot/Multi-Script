@@ -538,8 +538,7 @@ echo "$txtofus" | rev
 }
 verificar_arq () {
 [[ ! -d ${SCPdir} ]] && mkdir ${SCPdir}
-wget -O /etc/VPS-MX/menu https://raw.githubusercontent.com/NetVPS/Multi-Script/main/LACASITAMX-v9x/VPS-MX/menu &>/dev/null
-chmod 777 /etc/VPS-MX/menu
+
 [[ ! -d ${SCPusr} ]] && mkdir ${SCPusr}
 [[ ! -d ${SCPfrm} ]] && mkdir ${SCPfrm}
 [[ ! -d ${SCPinst} ]] && mkdir ${SCPinst}
