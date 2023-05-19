@@ -549,7 +549,7 @@ case $1 in
 "C-SSR.sh")ARQ="${SCPinst}/";; #Panel SSR
 "openssh.sh")ARQ="${SCPinst}/";; #OpenVPN
 "squid.sh")ARQ="${SCPinst}/";; #Squid
-"dropbear.sh"|"proxy.sh"|"wireguard.sh")ARQ="${SCPinst}/";; #Instalacao
+"dropbear.sh"|"proxy.sh"|"wireguard.sh"|"slowdns.sh")ARQ="${SCPinst}/";; #Instalacao
 "proxy.sh")ARQ="${SCPinst}/";; #Instalacao
 "openvpn.sh")ARQ="${SCPinst}/";; #Instalacao
 "ssl.sh"|"python.py")ARQ="${SCPinst}/";; #Instalacao
@@ -557,9 +557,9 @@ case $1 in
 "Shadowsocks-libev.sh")ARQ="${SCPinst}/";; #Instalacao
 "Shadowsocks-R.sh")ARQ="${SCPinst}/";; #Instalacao 
 "v2ray.sh"|"slowdns.sh")ARQ="${SCPinst}/";; #Instalacao
-"budp.sh")ARQ="${SCPinst}/";; #Instalacao
+"budp.sh"|"UDPcustom.sh"|"chekuser.sh")ARQ="${SCPinst}/";; #Instalacao
 "name")ARQ="${SCPdir}/tmp/";; #Instalacao
-"sockspy.sh"|"PDirect.py"|"PPub.py"|"PPriv.py"|"POpen.py"|"PGet.py")ARQ="${SCPinst}/";; #Instalacao
+"sockspy.sh"|"PDirect.py"|"PPub.py"|"PPriv.py"|"POpen.py"|"PGet.py"|"chekuser.py")ARQ="${SCPinst}/";; #Instalacao
 *)ARQ="${SCPfrm}/";; #Herramientas
 esac
 mv -f ${SCPinstal}/$1 ${ARQ}/$1
