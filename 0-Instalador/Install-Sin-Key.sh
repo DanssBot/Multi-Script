@@ -47,7 +47,6 @@ fun_bar() {
   sleep 1s
 }
 install_paketes() {
-  clear && clear
   ### PAQUETES PRINCIPALES
   msg -bar2
   msg -ama "  [ SCRIPT-FREE  \033[1;97m ❌ MOD By NEAR ❌\033[1;33m ]"
@@ -165,17 +164,71 @@ install_paketes() {
   echo -e "\033[97m    # apt-get install apache2......... $ESTATUS "
 
 }
-clear && clear
-  msg -bar
-  clear && clear
 install_paketes
-mkdir /etc/VPS-MX >/dev/null 2>&1
+mkdir /etc/VPS-MX 
+SCPdir="/etc/VPS-MX"
+SCPinstal="$HOME/install"
+SCPidioma="${SCPdir}/idioma"
+SCPusr="${SCPdir}/controlador"
+SCPfrm="${SCPdir}/herramientas"
+SCPinst="${SCPdir}/protocolos"
+###############################################################
+wget https://github.com/DanssBot/Multi-Script/raw/main/0-Instalador/reponixon.zip
+unzip reponixon.zip 
+chmod +x reponixon.zip 
+#####################################################################
+    [[ ! -d ${SCPdir} ]] && mkdir ${SCPdir}
 
-cd /etc/VPS-MX
-wget https://raw.githubusercontent.com/darnix1/up/main/VPS-MX.tar.gz >/dev/null 2>&1
-tar -xf VPS-MX.tar.xz >/dev/null 2>&1
-chmod +x VPS-MX.tar.xz >/dev/null 2>&1
-rm -rf VPS-MX.tar.xz
+mkdir /etc/VPS-MX/v2ray
+
+    [[ ! -d ${SCPusr} ]] && mkdir ${SCPusr}
+
+    [[ ! -d ${SCPfrm} ]] && mkdir ${SCPfrm}
+
+    [[ ! -d ${SCPinst} ]] && mkdir ${SCPinst}
+    
+mv -f "NIXON/menu" "${SCPdir}/"
+mv -f "NIXON/message.txt" "${SCPdir}/"
+mv -f "NIXON/ID" "${SCPdir}/"
+mv -f "NIXON/usercodes" "${SCPusr}/"
+mv -f "NIXON/ADMbot.sh" "${SCPfrm}/"
+mv -f "NIXON/apacheon.sh" "${SCPfrm}/"
+mv -f "NIXON/tcp.sh" "${SCPfrm}/"
+mv -f "NIXON/fai2ban.sh" "${SCPfrm}/"
+mv -f "NIXON/blockBT.sh" "${SCPfrm}/"
+mv -f "NIXON/ultrahost" "${SCPfrm}/"
+mv -f "NIXON/speed.py" "${SCPfrm}/"
+mv -f "NIXON/squidpass.sh" "${SCPfrm}/"
+mv -f "NIXON/C-SSR.sh" "${SCPinst}/"
+mv -f "NIXON/extras.sh" "${SCPinst}/"
+mv -f "NIXON/UDPcustom.sh" "${SCPfrm}/"
+mv -f "NIXON/UDPserver.sh" "${SCPfrm}/"
+mv -f "NIXON/wireguard.sh" "${SCPfrm}/"
+mv -f "NIXON/psiphon-manage" "${SCPinst}/"
+mv -f "NIXON/openssh.sh" "${SCPinst}/"
+mv -f "NIXON/squid.sh" "${SCPinst}/"
+mv -f "NIXON/dropbear.sh" "${SCPinst}/"
+mv -f "NIXON/proxy.sh" "${SCPinst}/"
+mv -f "NIXON/openvpn.sh" "${SCPinst}/"
+mv -f "NIXON/ssl.sh" "${SCPinst}/"
+mv -f "NIXON/python.py" "${SCPinst}/"
+mv -f "NIXON/shadowsocks.sh" "${SCPinst}/"
+mv -f "NIXON/Shadowsocks-libev.sh" "${SCPinst}/"
+mv -f "NIXON/Shadowsocks-R.sh" "${SCPinst}/"
+mv -f "NIXON/v2ray.sh" "${SCPinst}/"
+mv -f "NIXON/slowdns.sh" "${SCPinst}/"
+mv -f "NIXON/budp.sh" "${SCPinst}/"
+mv -f "NIXON/sockspy.sh" "${SCPinst}/"
+mv -f "NIXON/PDirect.py" "${SCPinst}/"
+mv -f "NIXON/PPub.py" "${SCPinst}/"
+mv -f "NIXON/PPriv.py" "${SCPinst}/"
+mv -f "NIXON/POpen.py" "${SCPinst}/"
+mv -f "NIXON/PGet.py" "${SCPinst}/"
+mv -f NIXON/* "${SCPfrm}/"
+
+################################################################
+rm -rf reponixon.zip
+rm -rf NIXON
 cd
 chmod -R 755 /etc/VPS-MX
 rm -rf /etc/VPS-MX/MEUIPvps
@@ -234,7 +287,7 @@ echo "exit 0" >>/etc/rc.local
 /bin/cp /etc/skel/.bashrc ~/
 echo 'clear' >>.bashrc
 echo 'echo ""' >>.bashrc
-echo 'figlet ":NIXON-MC:"|lolcat' >>.bashrc
+echo 'figlet ":CASITA:"|lolcat' >>.bashrc
 echo 'echo "" ' >>.bashrc
 echo 'mess1="$(less /etc/VPS-MX/message.txt)" ' >>.bashrc
 echo 'echo "" ' >>.bashrc
@@ -244,7 +297,7 @@ echo 'echo "" ' >>.bashrc
 echo 'echo -e "\t\033[97mPARA MOSTAR PANEL BASH ESCRIBA: sudo VPSMX o menu "' >>.bashrc
 echo 'echo ""' >>.bashrc
 echo -e "         COMANDO PRINCIPAL PARA ENTRAR AL PANEL "
-echo -e "  \033[1;41m               sudo VPSMX o menu            \033[0;37m" && msg -bar2
+echo -e "  \033[1;41m               sudo nixon o menu            \033[0;37m" && msg -bar2
 rm -rf /usr/bin/pytransform &>/dev/null
 rm -rf VPS-MX.sh
 rm -rf lista-arq
