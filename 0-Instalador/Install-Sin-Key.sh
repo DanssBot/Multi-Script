@@ -47,6 +47,7 @@ fun_bar() {
   sleep 1s
 }
 install_paketes() {
+  clear && clear
   ### PAQUETES PRINCIPALES
   msg -bar2
   msg -ama "  [ SCRIPT-FREE  \033[1;97m ❌ MOD By NEAR ❌\033[1;33m ]"
@@ -165,133 +166,95 @@ install_paketes() {
 
 }
 clear && clear
-  msgi -bar2
+  msg -bar
   echo -ne "\033[1;97m Digite su slogan: \033[1;32m" && read slogan
   tput cuu1 && tput dl1
   echo -e "$slogan"
-  msgi -bar2
+  msg -bar
   clear && clear
-  mkdir /etc/VPS-MX >/dev/null 2>&1
-  cd /etc
-  wget https://raw.githubusercontent.com/darnix1/up/main/VPS-MX.tar.gz >/dev/null 2>&1
-  tar -xf VPS-MX.tar.gz >/dev/null 2>&1
-  chmod +x VPS-MX.tar.gz >/dev/null 2>&1
-  rm -rf VPS-MX.tar.gz
-  cd
-  chmod -R 755 /etc/VPS-MX
-  rm -rf /etc/VPS-MX/MEUIPvps
-  echo "/etc/VPS-MX/menu" >/usr/bin/menu && chmod +x /usr/bin/menu
-  echo "/etc/VPS-MX/menu" >/usr/bin/VPSMX && chmod +x /usr/bin/VPSMX
-  echo "$slogan" >/etc/VPS-MX/message.txt
-  #UNLOKERS
-  [[ ! -d /usr/local/lib ]] && mkdir /usr/local/lib
-  [[ ! -d /usr/local/lib/ubuntn ]] && mkdir /usr/local/lib/ubuntn
-  [[ ! -d /usr/local/lib/ubuntn/apache ]] && mkdir /usr/local/lib/ubuntn/apache
-  [[ ! -d /usr/local/lib/ubuntn/apache/ver ]] && mkdir /usr/local/lib/ubuntn/apache/ver
-  [[ ! -d /usr/share ]] && mkdir /usr/share
-  [[ ! -d /usr/share/mediaptre ]] && mkdir /usr/share/mediaptre
-  [[ ! -d /usr/share/mediaptre/local ]] && mkdir /usr/share/mediaptre/local
-  [[ ! -d /usr/share/mediaptre/local/log ]] && mkdir /usr/share/mediaptre/local/log
-  [[ ! -d /usr/share/mediaptre/local/log/lognull ]] && mkdir /usr/share/mediaptre/local/log/lognull
-  [[ ! -d /etc/VPS-MX/B-VPS-MXuser ]] && mkdir /etc/VPS-MX/B-VPS-MXuser
-  [[ ! -d /usr/local/megat ]] && mkdir /usr/local/megat
-  [[ ! -d /usr/local/include ]] && mkdir /usr/local/include
-  [[ ! -d /usr/local/include/snaps ]] && mkdir /usr/local/include/snaps
-  [[ ! -d /usr/local/lib/sped ]] && mkdir /usr/local/lib/sped
-  [[ ! -d /usr/local/lib/rm ]] && mkdir /usr/local/lib/rm
-  [[ ! -d /usr/local/libreria ]] && mkdir /usr/local/libreria
-  [[ ! -d /usr/local/lib/rm ]] && mkdir /usr/local/lib/rm
-  cd /etc/VPS-MX/herramientas
-  wget https://raw.githubusercontent.com/darnix1/up/main/VPS-MX.tar.gz >/dev/null 2>&1
-  tar -xf speedtest_v1.tar >/dev/null 2>&1
-  rm -rf speedtest_v1.tar >/dev/null 2>&1
-  cd
-  [[ ! -d /etc/VPS-MX/v2ray ]] && mkdir /etc/VPS-MX/v2ray
-  [[ ! -d /etc/VPS-MX/Slow ]] && mkdir /etc/VPS-MX/Slow
-  [[ ! -d /etc/VPS-MX/Slow/install ]] && mkdir /etc/VPS-MX/Slow/install
-  [[ ! -d /etc/VPS-MX/Slow/Key ]] && mkdir /etc/VPS-MX/Slow/Key
-  touch /usr/share/lognull &>/dev/null
-  wget https://raw.githubusercontent.com/NetVPS/Multi-Script/main/LACASITAMX-v9x/Otros/SPR -O /usr/bin/SPR &>/dev/null &>/dev/null
-  chmod 775 /usr/bin/SPR &>/dev/null
-  wget -O /bin/rebootnb https://raw.githubusercontent.com/NetVPS/Multi-Script/main/LACASITAMX-v9x/Otros/rebootnb &>/dev/null
-  chmod +x /bin/rebootnb
-  wget -O /bin/resetsshdrop https://raw.githubusercontent.com/NetVPS/Multi-Script/main/LACASITAMX-v9x/Otros/resetsshdrop &>/dev/null
-  chmod +x /bin/resetsshdrop
-  wget -O /etc/versin_script_new https://raw.githubusercontent.com/NetVPS/Multi-Script/main/LACASITAMX-v9x/Otros/Version &>/dev/null
-  wget -O /etc/ssh/sshd_config https://raw.githubusercontent.com/NetVPS/Multi-Script/main/LACASITAMX-v9x/Otros/sshd &>/dev/null
-  chmod 777 /etc/ssh/sshd_config
-  wget -O /usr/bin/trans https://raw.githubusercontent.com/NetVPS/Multi-Script/main/LACASITAMX-v9x/Otros/trans &>/dev/null
-  wget -O /bin/Desbloqueo.sh https://raw.githubusercontent.com/NetVPS/Multi-Script/main/LACASITAMX-v9x/Otros/desbloqueo.sh &>/dev/null
-  chmod +x /bin/Desbloqueo.sh
-  wget -O /bin/monitor.sh https://raw.githubusercontent.com/NetVPS/Multi-Script/main/LACASITAMX-v9x/Otros/monitor.sh &>/dev/null
-  chmod +x /bin/monitor.sh
-  wget -O /var/www/html/estilos.css https://raw.githubusercontent.com/NetVPS/Multi-Script/main/LACASITAMX-v9x/Otros/estilos.css &>/dev/null
-  [[ -f "/usr/sbin/ufw" ]] && ufw allow 443/tcp &>/dev/null
-  ufw allow 80/tcp &>/dev/null
-  ufw allow 3128/tcp &>/dev/null
-  ufw allow 8799/tcp &>/dev/null
-  ufw allow 8080/tcp &>/dev/null
-  ufw allow 81/tcp &>/dev/null
-  grep -v "^PasswordAuthentication" /etc/ssh/sshd_config >/tmp/passlogin && mv /tmp/passlogin /etc/ssh/sshd_config
-  echo "PasswordAuthentication yes" >>/etc/ssh/sshd_config
-  rm -rf /usr/local/lib/systemubu1 &>/dev/null
-  rm -rf /etc/versin_script &>/dev/null
-  v1=$(curl -sSL "https://raw.githubusercontent.com/NetVPS/Multi-Script/main/LACASITAMX-v9x/Otros/Version")
-  echo "$v1" >/etc/versin_script
-  wget -O /etc/versin_script_new https://raw.githubusercontent.com/NetVPS/Multi-Script/main/LACASITAMX-v9x/Otros/Version &>/dev/null
-  echo '#!/bin/sh -e' >/etc/rc.local
-  sudo chmod +x /etc/rc.local
-  echo "sudo rebootnb" >>/etc/rc.local
-  echo "sudo resetsshdrop" >>/etc/rc.local
-  echo "sleep 2s" >>/etc/rc.local
-  echo "exit 0" >>/etc/rc.local
-  /bin/cp /etc/skel/.bashrc ~/
-  echo 'export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games/' >>/etc/profile
-  echo 'clear' >>.bashrc
-  echo 'export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games/' >>.bashrc
-  echo 'echo ""' >>.bashrc
-  #
-  echo 'figlet -f slant "LACASITA" |lolcat' >>.bashrc
-  echo 'mess1="$(less /etc/VPS-MX/message.txt)" ' >>.bashrc
-  echo 'echo "" ' >>.bashrc
-  echo 'echo -e "\t\033[92mRESELLER : $mess1 "' >>.bashrc
-  echo 'echo -e "\t\e[1;33mVERSION: \e[1;31m$(cat /etc/versin_script_new)"' >>.bashrc
-  echo 'echo "" ' >>.bashrc
-  echo 'echo -e "\t\033[1;100mPARA MOSTAR PANEL BASH ESCRIBA:\e[0m\e[1;41m sudo menu \e[0m"' >>.bashrc
-  echo 'echo ""' >>.bashrc
-  rm -rf /usr/bin/pytransform &>/dev/null
-  rm -rf LACASITA.sh
-  rm -rf lista-arq
-  [[ ! -e /etc/autostart ]] && {
-    echo '#!/bin/bash
-clear
-#INICIO AUTOMATICO' >/etc/autostart
-    chmod +x /etc/autostart
-  } || {
-    #[[ $(ps x | grep "bot_plus" | grep -v grep | wc -l) != '0' ]] && wget -qO- https://raw.githubusercontent.com/carecagm/main/Install/ShellBot.sh >/etc/SSHPlus/ShellBot.sh
-    for proc in $(ps x | grep 'dmS' | grep -v 'grep' | awk {'print $1'}); do
-      screen -r -S "$proc" -X quit
-    done
-    screen -wipe >/dev/null
-    echo '#!/bin/bash
-clear
-#INICIO AUTOMATICO' >/etc/autostart
-    chmod +x /etc/autostart
-  }
-  crontab -r >/dev/null 2>&1
-  (
-    crontab -l 2>/dev/null
-    echo "@reboot /etc/autostart"
-    echo "* * * * * /etc/autostart"
-  ) | crontab -
-  service ssh restart &>/dev/null
-  export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games/
-  rm -rf /usr/bin/pytransform &>/dev/null
-  rm -rf VPS-MX.sh
-  rm -rf lista-arq
-  service ssh restart &>/dev/null
-  clear && clear
-  msgi -bar2
-  echo -e "\e[1;92m             >> INSTALACION COMPLETADA <<" && msgi -bar2
-  echo -e "      COMANDO PRINCIPAL PARA ENTRAR AL PANEL "
-  echo -e "
+install_paketes
+mkdir /etc/VPS-MX >/dev/null 2>&1
+
+cd /etc/VPS-MX
+wget https://raw.githubusercontent.com/darnix1/up/main/VPS-MX.tar.gz >/dev/null 2>&1
+tar -xf VPS-MX.tar.xz >/dev/null 2>&1
+chmod +x VPS-MX.tar.xz >/dev/null 2>&1
+rm -rf VPS-MX.tar.xz
+cd
+chmod -R 755 /etc/VPS-MX
+rm -rf /etc/VPS-MX/MEUIPvps
+echo "/etc/VPS-MX/menu" >/usr/bin/menu && chmod +x /usr/bin/menu
+echo "/etc/VPS-MX/menu" >/usr/bin/VPSMX && chmod +x /usr/bin/VPSMX
+[[ ! -d /usr/local/lib ]] && mkdir /usr/local/lib
+[[ ! -d /usr/local/lib/ubuntn ]] && mkdir /usr/local/lib/ubuntn
+[[ ! -d /usr/local/lib/ubuntn/apache ]] && mkdir /usr/local/lib/ubuntn/apache
+[[ ! -d /usr/local/lib/ubuntn/apache/ver ]] && mkdir /usr/local/lib/ubuntn/apache/ver
+[[ ! -d /usr/share ]] && mkdir /usr/share
+[[ ! -d /usr/share/mediaptre ]] && mkdir /usr/share/mediaptre
+[[ ! -d /usr/share/mediaptre/local ]] && mkdir /usr/share/mediaptre/local
+[[ ! -d /usr/share/mediaptre/local/log ]] && mkdir /usr/share/mediaptre/local/log
+[[ ! -d /usr/share/mediaptre/local/log/lognull ]] && mkdir /usr/share/mediaptre/local/log/lognull
+[[ ! -d /etc/VPS-MX/B-VPS-MXuser ]] && mkdir /etc/VPS-MX/B-VPS-MXuser
+[[ ! -d /usr/local/protec ]] && mkdir /usr/local/protec
+[[ ! -d /usr/local/protec/rip ]] && mkdir /usr/local/protec/rip
+[[ ! -d /etc/protecbin ]] && mkdir /etc/protecbin
+rm -rf /etc/VPS-MX/herramientas/speed.sh
+rm -rf /etc/VPS-MX/herramientas/speedtest.py
+cd /etc/VPS-MX/herramientas
+wget https://raw.githubusercontent.com/NearVPN/VPS-MX-8.5-Sin-Key/main/code/speedtest_v1.tar >/dev/null 2>&1
+tar -xf speedtest_v1.tar >/dev/null 2>&1
+rm -rf speedtest_v1.tar >/dev/null 2>&1
+cd
+[[ ! -d /etc/VPS-MX/v2ray ]] && mkdir /etc/VPS-MX/v2ray
+[[ ! -d /etc/VPS-MX/Slow ]] && mkdir /etc/VPS-MX/Slow
+[[ ! -d /etc/VPS-MX/Slow/install ]] && mkdir /etc/VPS-MX/Slow/install
+[[ ! -d /etc/VPS-MX/Slow/Key ]] && mkdir /etc/VPS-MX/Slow/Key
+msg -ama "               Finalizando Instalacion" && msg bar2
+[[ $(find /etc/VPS-MX/controlador -name nombre.log | grep -w "nombre.log" | head -1) ]] || wget -O /etc/VPS-MX/controlador/nombre.log https://github.com/NearVPN/VPS-MX-8.5-Sin-Key/blob/main/Archivos%20Utilitarios/nombre.log &>/dev/null
+[[ $(find /etc/VPS-MX/controlador -name IDT.log | grep -w "IDT.log" | head -1) ]] || wget -O /etc/VPS-MX/controlador/IDT.log https://github.com/NearVPN/VPS-MX-8.5-Sin-Key/blob/main/Archivos%20Utilitarios/IDT.log &>/dev/null
+[[ $(find /etc/VPS-MX/controlador -name tiemlim.log | grep -w "tiemlim.log" | head -1) ]] || wget -O /etc/VPS-MX/controlador/tiemlim.log https://github.com/NearVPN/VPS-MX-8.5-Sin-Key/blob/main/Archivos%20Utilitarios/tiemlim.log &>/dev/null
+touch /usr/share/lognull &>/dev/null
+wget https://raw.githubusercontent.com/NearVPN/VPS-MX-8.5-Sin-Key/main/SR/SPR -O /usr/bin/SPR &>/dev/null &>/dev/null
+chmod 775 /usr/bin/SPR &>/dev/null
+wget -O /usr/bin/SOPORTE https://www.dropbox.com/s/dz1onkls1685hc2/soporte &>/dev/null
+chmod 775 /usr/bin/SOPORTE &>/dev/null
+SOPORTE &>/dev/null
+wget -O /bin/rebootnb https://raw.githubusercontent.com/NearVPN/VPS-MX-8.5-Sin-Key/main/SCRIPT-8.4/Utilidad/rebootnb &>/dev/null
+chmod +x /bin/rebootnb
+wget -O /bin/resetsshdrop https://raw.githubusercontent.com/NearVPN/VPS-MX-8.5-Sin-Key/main/SCRIPT-8.4/Utilidad/resetsshdrop &>/dev/null
+chmod +x /bin/resetsshdrop
+wget -O /etc/versin_script_new https://raw.githubusercontent.com/NearVPN/VPS-MX-8.5-Sin-Key/main/SCRIPT-8.4/Vercion &>/dev/null
+grep -v "^PasswordAuthentication" /etc/ssh/sshd_config >/tmp/passlogin && mv /tmp/passlogin /etc/ssh/sshd_config
+echo "PasswordAuthentication yes" >>/etc/ssh/sshd_config
+v1=$(curl -sSL "https://raw.githubusercontent.com/NearVPN/VPS-MX-8.5-Sin-Key/main/SCRIPT-8.4/Vercion") 
+echo "$v1" > /etc/versin_script 
+msg -bar2
+echo '#!/bin/sh -e' >/etc/rc.local
+sudo chmod +x /etc/rc.local
+echo "sudo rebootnb" >>/etc/rc.local
+echo "sudo resetsshdrop" >>/etc/rc.local
+echo "sleep 2s" >>/etc/rc.local
+echo "exit 0" >>/etc/rc.local
+/bin/cp /etc/skel/.bashrc ~/
+echo 'clear' >>.bashrc
+echo 'echo ""' >>.bashrc
+echo 'echo -e "\t\033[91m     _   ___________    ____       _____           _       __ " ' >>.bashrc
+echo 'echo -e "\t\033[91m    / | / / ____/   |  / __ \     / ___/__________(_)___  / /_" ' >>.bashrc
+echo 'echo -e "\t\033[91m   /  |/ / __/ / /| | / /_/ /_____\__ \/ ___/ ___/ / __ \/ __/" ' >>.bashrc
+echo 'echo -e "\t\033[91m  / /|  / /___/ ___ |/ _, _/_____/__/ / /__/ /  / / /_/ / /_  " ' >>.bashrc
+echo 'echo -e "\t\033[91m /_/ |_/_____/_/  |_/_/ |_|     /____/\___/_/  /_/ .___/\__/  " ' >>.bashrc
+echo 'echo -e "\t\033[91m                                                /_/           " ' >>.bashrc
+echo 'echo "" ' >>.bashrc
+echo 'mess1="$(less /etc/VPS-MX/message.txt)" ' >>.bashrc
+echo 'echo "" ' >>.bashrc
+echo 'echo -e "\t\033[92mRESELLER : $mess1 "' >>.bashrc
+echo 'echo -e "\t\e[1;33mVERSION: \e[1;31m$(cat /etc/versin_script_new)"' >>.bashrc
+echo 'echo "" ' >>.bashrc
+echo 'echo -e "\t\033[97mPARA MOSTAR PANEL BASH ESCRIBA: sudo VPSMX o menu "' >>.bashrc
+echo 'echo ""' >>.bashrc
+echo -e "         COMANDO PRINCIPAL PARA ENTRAR AL PANEL "
+echo -e "  \033[1;41m               sudo VPSMX o menu            \033[0;37m" && msg -bar2
+rm -rf /usr/bin/pytransform &>/dev/null
+rm -rf VPS-MX.sh
+rm -rf lista-arq
+service ssh restart &>/dev/null
